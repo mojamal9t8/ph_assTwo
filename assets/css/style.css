@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+* {
+  box-sizing: border-box;
+  text-transform: capitalize;
+  font-family: "Inter", sans-serif;
+  transition: all 0.1s linear;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.hide {
+  display: none;
+}
+
+header {
+  background-color: #1A0B2E;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav .logo span {
+  background: linear-gradient(0deg, rgb(247, 233, 63) 0%, rgb(251, 9, 180) 50%, rgb(145, 0, 248) 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+header nav .menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+header nav .menu li :hover {
+  color: #dbdbdb;
+}
+header nav .btn-group .btn {
+  background: linear-gradient(45deg, rgb(247, 233, 63) 0%, rgb(251, 9, 180) 50%, rgb(145, 0, 248) 100%);
+}
+
+@media screen and (max-width: 576px) {
+  .menu {
+    display: none;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  .test {
+    color: blue;
+  }
+}
+@media screen and (min-width: 992px) {
+  .test {
+    color: orange;
+  }
+}/*# sourceMappingURL=style.css.map */

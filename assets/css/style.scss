@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+$colorOne: #1A0B2E;
+$gray: #dbdbdb;
+
+* {
+  box-sizing: border-box;
+  text-transform: capitalize;
+  font-family: "Inter", sans-serif;
+  transition: all 0.1s linear;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.hide {
+  display: none;
+}
+
+// Start Header Section
+header {
+  background-color: $colorOne;
+
+  nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo{
+
+      span {
+        background: linear-gradient(0deg, rgba(247, 233, 63, 1) 0%, rgba(251, 9, 180, 1) 50%, rgba(145, 0, 248, 1) 100%);
+        background-clip: text;
+        color: transparent;
+      }
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+
+      li {
+        :hover{color: $gray;}
+      }
+    }
+
+    .btn-group {
+      .btn {
+          background: linear-gradient(45deg,
+                    rgba(247, 233, 63, 1) 0%,
+                    rgba(251, 9, 180, 1) 50%,
+                    rgba(145, 0, 248, 1) 100%
+                  );
+      }
+    }
+  }
+}
+
+
+// Responsive Section
+
+@media screen and (max-width: 576px) {
+  .menu{display: none;}
+}
+
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  .test{color: blue;}
+}
+
+@media screen and (min-width: 992px) {
+  .test{color: orange;}
+}
