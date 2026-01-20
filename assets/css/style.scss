@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 $colorOne: #1A0B2E;
+$colorTwo: #2A186C;
+$green: #00FF88;
 $gray: #dbdbdb;
+$black: #000000;
 
 * {
   box-sizing: border-box;
-  text-transform: capitalize;
   font-family: "Inter", sans-serif;
   transition: all 0.1s linear;
   text-decoration: none;
@@ -20,61 +22,56 @@ body {
   overflow-x: hidden;
 }
 
-.hide {
+.bg-deep{background-color: $colorOne;}
+.c-deep{color: $colorOne;}
+.c-gray{color: $gray;}
+.c-green{color: $green;}
+
+.all_none {
   display: none;
 }
-
+section{height: 50vh; width: 100vw;}
 // Start Header Section
-header {
-  background-color: $colorOne;
 
-  nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+// Hero Section
+.hero {
+  width: 100vw;
+  .mic {
+    border: 5px solid $colorTwo;
+    position: relative;
 
-    .logo{
-
-      span {
-        background: linear-gradient(0deg, rgba(247, 233, 63, 1) 0%, rgba(251, 9, 180, 1) 50%, rgba(145, 0, 248, 1) 100%);
-        background-clip: text;
-        color: transparent;
-      }
-    }
-
-    .menu {
+    &::before{
+      position: absolute;
+      height: 35px;
+      width: 70px;
+      color: $black;
+      content: "NEW";
+      background-color: $green;
+      top: 0;
+      right: 0;
+      border-radius: 35px;
       display: flex;
+      justify-content: center;
       align-items: center;
-      gap: 2rem;
-
-      li {
-        :hover{color: $gray;}
-      }
-    }
-
-    .btn-group {
-      .btn {
-          background: linear-gradient(45deg,
-                    rgba(247, 233, 63, 1) 0%,
-                    rgba(251, 9, 180, 1) 50%,
-                    rgba(145, 0, 248, 1) 100%
-                  );
-      }
+      font-weight: bold;
+      box-shadow: 0px 0px 25px -2px $green;
     }
   }
 }
 
 
+
 // Responsive Section
 
 @media screen and (max-width: 576px) {
-  .menu{display: none;}
+  .sm_none{display: none;}
 }
 
-@media screen and (min-width: 576px) and (max-width: 992px) {
-  .test{color: blue;}
+@media screen and (min-width: 576px) {
+  .md_none{display: none;}
+  .logo{font-size: 32px;}
 }
 
 @media screen and (min-width: 992px) {
-  .test{color: orange;}
+  .lg_none{display: none;}
 }
