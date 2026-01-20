@@ -3,8 +3,11 @@
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
   transition: all 0.1s linear;
+  text-transform: capitalize;
   text-decoration: none;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -15,70 +18,161 @@ body {
   overflow-x: hidden;
 }
 
-.bg-deep {
-  background-color: #1A0B2E;
-}
-
-.c-deep {
-  color: #1A0B2E;
-}
-
-.c-gray {
-  color: #dbdbdb;
-}
-
-.c-green {
-  color: #00FF88;
-}
-
 .all_none {
   display: none;
 }
 
-section {
-  height: 50vh;
-  width: 100vw;
+.btn_gradient {
+  background: linear-gradient(35deg, #F7E93F 0%, #FB09B4 50%, #9100F8 100%);
+  padding: 0.75rem 1rem;
+  border-radius: 1.375rem;
+  color: #ffffff;
+}
+.btn_gradient:hover {
+  background: linear-gradient(-125deg, #F7E93F 0%, #FB09B4 50%, #9100F8 100%);
+}
+
+.btn_green {
+  padding: 0.7rem 1rem;
+  border: 1px solid #00FF88;
+  border-radius: 1.4rem;
+  color: #00FF88;
+}
+.btn_green:hover {
+  background-color: #00FF88;
+  color: #1A0B2E;
+}
+
+header {
+  background-color: #1A0B2E;
+  border-bottom: 1px solid #412567;
+}
+header .navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+header .navbar .logo {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 700;
+}
+header .navbar .logo span {
+  background: linear-gradient(35deg, #F7E93F 0%, #FB09B4 50%, #9100F8 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+header .navbar .menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+header .navbar .menu a {
+  color: #ffffff;
+}
+header .navbar .menu a:hover {
+  color: #00FF88;
+}
+header .navbar .menu_bar {
+  color: #ffffff;
+  font-size: 1.8rem;
 }
 
 .hero {
-  width: 100vw;
+  background-image: url(../img/hero-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 6.25rem 0;
+  display: flex;
+  justify-content: center;
+  transition: all 0.5s ease;
 }
-.hero .mic {
-  border: 5px solid #2A186C;
-  position: relative;
-}
-.hero .mic::before {
-  position: absolute;
-  height: 35px;
-  width: 70px;
-  color: #000000;
-  content: "NEW";
-  background-color: #00FF88;
-  top: 0;
-  right: 0;
-  border-radius: 35px;
+.hero .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: bold;
-  box-shadow: 0px 0px 25px -2px #00FF88;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 0 1.5rem;
+}
+.hero .container .mic {
+  background: linear-gradient(35deg, #F7E93F 0%, #FB09B4 50%, #9100F8 100%);
+  width: 21.25rem;
+  height: 21.25rem;
+  border: 0.7rem solid #2A186C;
+  border-radius: 10.625rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.hero .container .mic img {
+  height: 11rem;
+}
+.hero .container .mic:hover {
+  background: linear-gradient(-125deg, #F7E93F 0%, #FB09B4 50%, #9100F8 100%);
+}
+.hero .container .mic:hover img {
+  transform: scale(1.1);
+}
+.hero .container .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.hero .container .content h1 {
+  font-size: 3.5rem;
+  color: #ffffff;
+}
+.hero .container .content p {
+  color: #dbdbdb;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
-@media screen and (max-width: 576px) {
-  .sm_none {
-    display: none;
-  }
+.about {
+  padding: 3.1rem 12.5rem 7.5rem 12.5rem;
+  background-color: #1A0B2E;
 }
-@media screen and (min-width: 576px) {
-  .md_none {
-    display: none;
-  }
-  .logo {
-    font-size: 32px;
-  }
+.about .container .textarea {
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
 }
+.about .container .textarea h2 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  line-height: 5rem;
+}
+.about .container .textarea p {
+  color: #dbdbdb;
+  line-height: 2rem;
+}
+
 @media screen and (min-width: 992px) {
-  .lg_none {
-    display: none;
+  .lg_hidden {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  html {
+    font-size: 80%;
+  }
+  .md_hidden {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 576px) {
+  html {
+    font-size: 62.5%;
+  }
+  .sm_hidden {
+    display: none !important;
   }
 }/*# sourceMappingURL=style.css.map */

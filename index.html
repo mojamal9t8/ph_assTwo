@@ -5,67 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechWave</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!--<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>-->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    
-    <header class="bg-deep text-white">
-        <nav class="flex justify-between items-center px-[20px] py-4 max-w-[1200px] my-0 mx-auto">
-            <a href="#" class="logo font-bold text-xl">Tech<span class="bg-[linear-gradient(15deg,#F7E93F,#FB09B4,#9100F8)] bg-clip-text text-transparent">Wave</span></a>
-            <ul class="sm_none flex items-center gap-6">
-                <li><a href="#" class="hover:text-gray-300">About</a></li>
-                <li><a href="#" class="hover:text-gray-300">Episodes</a></li>
-                <li><a href="#" class="hover:text-gray-300">Host</a></li>
+
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">Tech<span>Wave</span></a>
+            <ul class="menu sm_hidden">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Episodes</a></li>
+                <li><a href="#">Host</a></li>
             </ul>
-            <a href="#" class="bg-[linear-gradient(45deg,#F7E93F,#FB09B4,#9100F8)] hover:bg-[linear-gradient(90deg,#F7E93F,#FB09B4,#9100F8)] px-4 py-2 rounded-3xl sm_none">Subscribe <i class="fa-solid fa-arrow-right"></i></a>
-            <div class="menu_bar md_none lg_none"><i class="fa-solid fa-bars"></i></div>
+            <a href="#" class="btn_gradient sm_hidden">Subscribe <i class="fa-solid fa-arrow-right"></i></a>
+            <div class="menu_bar md_hidden lg_hidden"><i class="fa-solid fa-bars"></i></div>
         </nav>
     </header>
 
-    <section class="hero bg-[url('/assets/img/hero-bg.png')] bg-center bg-no-repeat bg-cover w-full flex flex-col items-center py-10 px-5 gap-[24px]">
-        <div  class="flex justify-center">
-            <div class="mic h-[200px] w-[200px] flex items-center justify-center bg-[linear-gradient(45deg,#F7E93F,#FB09B4,#9100F8)] rounded-full">
-                <img src="/assets/img/microphone.png" alt="microphone" class="h-[90px]">
+    <section class="hero">
+        <div class="container">
+            <div class="mic">
+                <img src="assets/img/microphone.png" alt="microphone">
             </div>
-        </div>
-        <div class="text-center">
-            <h1 class="text-white font-bold text-5xl">TechWave</h1>
-            <p class="c-gray mt-1">Your daily dose of tech insights, productivity h2cks, and personal growth</p>
-        </div>
-        <div class="flex items-center gap-[10px]">
-            <a href="#" class="bg-[linear-gradient(45deg,#F7E93F,#FB09B4,#9100F8)] hover:bg-[linear-gradient(90deg,#F7E93F,#FB09B4,#9100F8)] px-4 py-2 rounded-3xl text-white"><i class="fa-brands fa-spotify"></i> Listen On Spotify</a>
-            <a href="#" class="border border-[#00FF88] px-4 py-[7px] rounded-3xl c-green"><i class="fa-regular fa-envelope"></i> Subscribe</a>
+            <div class="content">
+                <h1>TechWave</h1>
+                <p>Your daily dose of tech insights, productivity hacks, and personal growth</p>
+                <div class="btn-area">
+                    <a href="#" class="btn_gradient"><i class="fa-brands fa-spotify"></i> Listen On Spotify</a>
+                    <a href="#" class="btn_green"><i class="fa-regular fa-envelope"></i> Subscribe</a>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="py-[40px] px-[20px] bg-deep">
-        <div class="text-white text-center mb-6">
-            <h2 class="text-3xl text-bold">About The Podcast</h2>
-            <p class="mt-2 c-gray">TechWave is your go-to podcast for staying ahead in the fast-paced world of technology.
-We break down complex topics into digestible insights, explore productivity strategies that actually work, 
-and share stories of personal growth from industry leaders.
-<br> <br>
-Join thousands of young professionals and tech enthusiasts who start their day with TechWave.</p>
-        </div>
-        <hr class="c-gray mb-6">
-        <div class="grid grid-cols-2">
-            <div class="text-center">
-                <h2 class="text-4xl c-green font-bold">150K+</h2>
-                <p class="uppercase c-gray mt-2">Monthly Listeners</p>
+    <section class="about">
+        <div class="container">
+            <div class="textarea">
+                <h2>About The Podcast</h2>
+                <p>TechWave is your go-to podcast for staying ahead in the fast-paced world of technology. <br>
+                We break down complex topics into digestible insights, explore productivity strategies that actually work, <br>
+                and share stories of personal growth from industry leaders.
+                <br><br>
+                Join thousands of young professionals and tech enthusiasts who start their day with TechWave.</p>
             </div>
-            <div class="text-center">
-                <h2 class="text-4xl c-green font-bold">200+</h2>
-                <p class="uppercase c-gray mt-2">Episodes published</p>
-            </div>
-            <div class="text-center">
-                <h2 class="text-4xl c-green font-bold">4.9★</h2>
-                <p class="uppercase c-gray mt-2">average rating</p>
-            </div>
-            <div class="text-center">
-                <h2 class="text-4xl c-green font-bold">50+</h2>
-                <p class="uppercase c-gray mt-2">industry experts</p>
-            </div>
+            <div class="line"></div>
+            <ul class="stat_items">
+                <li>
+                    <div class="stat">150K+</div>
+                    <p>Monthly listeners</p>
+                </li>
+                <li>
+                    <div class="stat">150K+</div>
+                    <p>Monthly listeners</p>
+                </li>
+                <li>
+                    <div class="stat">150K+</div>
+                    <p>Monthly listeners</p>
+                </li>
+                <li>
+                    <div class="stat">150K+</div>
+                    <p>Monthly listeners</p>
+                </li>
+            </ul>
         </div>
     </section>
 
