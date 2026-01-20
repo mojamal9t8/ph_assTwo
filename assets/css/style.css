@@ -19,7 +19,7 @@ body {
 }
 
 .all_none {
-  display: none;
+  display: none !important;
 }
 
 .btn_gradient {
@@ -41,6 +41,12 @@ body {
 .btn_green:hover {
   background-color: #00FF88;
   color: #1A0B2E;
+}
+
+.section_heading {
+  color: #ffffff;
+  font-size: 2.5rem;
+  line-height: 5rem;
 }
 
 header {
@@ -142,17 +148,94 @@ header .navbar .menu_bar {
 }
 .about .container .textarea {
   margin: 0 auto;
-  width: 80%;
   text-align: center;
-}
-.about .container .textarea h2 {
-  color: #ffffff;
-  font-size: 2.5rem;
-  line-height: 5rem;
 }
 .about .container .textarea p {
   color: #dbdbdb;
   line-height: 2rem;
+}
+.about .container .line {
+  height: 1px;
+  width: 100%;
+  background-color: #412567;
+  margin: 3rem 0;
+}
+.about .container .stat_items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.about .container .stat_items li {
+  text-align: center;
+}
+.about .container .stat_items li .stat {
+  color: #00FF88;
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 4.5rem;
+}
+.about .container .stat_items li p {
+  color: #dbdbdb;
+  text-transform: uppercase;
+}
+
+.whyChoose {
+  background-color: #230E3D;
+  padding: 7.5rem 12.5rem;
+}
+.whyChoose .container {
+  text-align: center;
+}
+.whyChoose .container .features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 1.85rem;
+  margin-top: 2rem;
+}
+.whyChoose .container .features .item {
+  background-color: #290f4d;
+  padding: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1.5rem;
+  border-radius: 2rem;
+}
+.whyChoose .container .features .item img {
+  height: 3.75rem;
+}
+.whyChoose .container .features .item h3 {
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+.whyChoose .container .features .item p {
+  color: #dbdbdb;
+  text-align: left;
+}
+.whyChoose .container .features .item:hover {
+  transform: scale(1.01);
+}
+.whyChoose .container .features .item-1 {
+  grid-column: 1/2;
+  grid-row: 1/3;
+}
+.whyChoose .container .features .item-2 {
+  grid-column: 2/4;
+  grid-row: 1/2;
+}
+.whyChoose .container .features .item-3 {
+  grid-column: 2/4;
+  grid-row: 2/3;
+}
+.whyChoose .container .features .item-4 {
+  grid-column: 1/3;
+  grid-row: 3/4;
+}
+.whyChoose .container .features .item-5 {
+  grid-column: 3/4;
+  grid-row: 3/4;
 }
 
 @media screen and (min-width: 992px) {
@@ -167,6 +250,15 @@ header .navbar .menu_bar {
   .md_hidden {
     display: none !important;
   }
+  .about {
+    padding: 2.5rem 8rem 4rem 8rem;
+  }
+  .whyChoose {
+    padding: 4rem 8rem;
+  }
+  .whyChoose .container .features .item {
+    padding: 1rem;
+  }
 }
 @media screen and (max-width: 576px) {
   html {
@@ -174,5 +266,24 @@ header .navbar .menu_bar {
   }
   .sm_hidden {
     display: none !important;
+  }
+  .about {
+    padding: 2.5rem 1.25rem;
+  }
+  .about .container .stat_items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .whyChoose {
+    padding: 4rem 2rem;
+  }
+  .whyChoose .container .features {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 1.2rem;
+  }
+  .whyChoose .container .features .item {
+    padding: 2.4rem;
+    grid-column: auto;
+    grid-row: auto;
   }
 }/*# sourceMappingURL=style.css.map */
